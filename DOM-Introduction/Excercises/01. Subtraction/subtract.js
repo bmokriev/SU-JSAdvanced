@@ -3,7 +3,4 @@ function subtract() {
     let second = document.getElementById('secondNumber').value;
     let result = document.getElementById('result');
     result.textContent = +first - +second;
-
-    console.log(result);
-
 }
