@@ -17,6 +17,4 @@ function search() {
 
    // print num of matches
    resultText.textContent = `${count} matches found`
-
-
 }
