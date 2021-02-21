@@ -17,5 +17,4 @@ function solve() {
       par.textContent = p;
       output.appendChild(par)
     });
-
 }
