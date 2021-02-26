@@ -1,13 +1,12 @@
 function addItem() {
 
-    let input = document.querySelector('#newItemText')
-    let liEl = createElement('li', input.value)
+    let input = document.querySelector('#newItemText').value
+    let liEl = createElement('li', input)
 
     let deleteBtn = createElement('a', '[Delete]')
     deleteBtn.href = '#';
     deleteBtn.addEventListener('click', (ev) => {
         ev.target.remove()
-        console.log(ev.target.parentNode);
     })
     liEl.appendChild(deleteBtn);
 
