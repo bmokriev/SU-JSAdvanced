@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha charLookup"
+    "test": "mocha mathEnforcer"
   },
   "author": "",
   "license": "ISC",
