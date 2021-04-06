@@ -1,5 +1,6 @@
 const describe = require('mocha').describe;
 const expect = require('chai').expect;
+const assert = require('chai').assert;
 
 let pizzUni = {
     makeAnOrder: function (obj) {
@@ -44,16 +45,33 @@ let pizzUni = {
 }
 
 
-// describe('1', () => {
-//     it('2', () => {
-//         expect('a').to.equal('a')
-//     })
-// })
+
+
 
 describe("Tests …", function () {
-    describe('makeAnOrder', () => {
+    describe('1', () => {
         it('2', () => {
-            expect(pizzUni.makeAnOrder({})).to.equal('a')
+            expect('a').to.equal('a')
+        })
+    })
+
+    describe('makeAnOrder', () => {
+        const input1 = { pizzaName: 'a', orderedDrink: 'b' };
+        const input2 = { orderedDrink: 'b' };
+        const input3 = { pizzaName: 'a' };
+        const input4 = {};
+
+
+        it('error', () => {
+            assert.throw(() => pizzUni.makeAnOrder(input2), 'You must order at least 1 Pizza to finish the order.');
+            assert.throw(() => pizzUni.makeAnOrder(input4), 'You must order at least 1 Pizza to finish the order.');
+        })
+
+
+        it('result', () => {
+            // expect(pizzUni.makeAnOrder(input1)).to.equal('You just ordered a and b.')
+            assert.equal(pizzUni.makeAnOrder(input1), 'You just ordered ${input1.pizzaName} and ${input1.orderedDrink}.')
+
         })
     })
 });
